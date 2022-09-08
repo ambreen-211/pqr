@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/35c51907f9.js" crossorigin="anonymous"></script>
+
+    <title>Navigation</title>
+    <script>
+
+        function hello() {
+            document.write("contact us for details")
+            // alert("contact us for details")
+        }
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+
+        .navbar {
+
+            background-color: black;
+            /* border-radius: 12px; */
+        }
+
+        .navbar ul {
+            overflow: auto;
+        }
+
+        .navbar li {
+            float: left;
+            list-style: none;
+            margin: 20px 30px;
+
+        }
+
+        .navbar li a {
+            list-style: none;
+            display: inline-block;
+            padding: 8px 12px;
+            position: relative;
+            color: white;
+            font-size: 13px;
+            cursor: pointer;
+            transition: 0.5s;
+            text-decoration: none;
+            font-size: 20px;
+
+        }
+
+        .navbar li a:hover {
+            color: red;
+        }
+
+        .search {
+            float: right;
+            color: purple;
+            padding: 12px 75px;
+        }
+
+        .navbar input {
+            border: 3px solid gray;
+            border-radius: 20px;
+            width: 120px;
+            margin-left: -77px;
+            padding: 12px;
+
+        }
+
+        .p {
+            text-align: center;
+            height: 50px;
+
+        }
+
+        #home {
+            background-image: url(hunza.jpg);
+            color: black;
+            background-position: center;
+            background-size: cover;
+            height: 109vh;
+
+        }
+
+        .h1 {
+            text-align: center;
+            margin: 0px;
+            padding: 70px;
+            font-size: 50px;
+        }
+
+        .p2 {
+            text-align: center;
+            color: white;
+            font-size: 20PX;
+
+        }
+
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            border: 1px solid white;
+            padding: 12px 34px;
+            background: transparent;
+            position: relative;
+            cursor: pointer;
+            margin-left: 719px;
+            margin-top: 25px;
+        }
+
+
+        .btn:hover {
+            background-color: black;
+        }
+
+        .row {
+            margin-top: 0%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .col {
+
+            flex-basis: 30%;
+            background: linear-gradient(rgb(158, 204, 239), rgb(199, 225, 242));
+            border-radius: 10px;
+            margin-bottom: 5%;
+            margin-left: 40px;
+            margin-right: 40px;
+            padding: 20px 12px;
+            box-sizing: border-box;
+            transition: 1s;
+            cursor: pointer;
+
+        }
+
+        .col:hover {
+            box-shadow: 0 0 20px 0px rgba(38, 7, 110, 0.7);
+        }
+
+        p {
+            color: black;
+            font-size: 14px;
+            font-weight: 300px;
+            line-height: 22px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        video {
+            height: 400px;
+            width: 400px;
+            /* flex-basis: 30%; */
+            margin-bottom: 5%;
+            margin-left: 56px;
+            margin-right: 70px;
+            padding: 20px 12px;
+            box-sizing: border-box;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            float: left;
+            background: linear-gradient(rgb(118, 180, 227), rgb(174, 222, 174));
+        }
+
+        #h1 {
+            margin-top: 50px;
+            margin-bottom: 60px;
+            justify-content: center;
+            text-align: center;
+            font-size: 30PX;
+        }
+
+        @media(max-width:700px) {
+            .row {
+                flex-direction: column;
+            }
+
+            .h1 {
+                font-size: 15px;
+            }
+
+            .p2 {
+                font-size: 15px;
+            }
+
+            .navbar li {
+                float: none;
+                list-style: none;
+                display: flex;
+                margin: 20px 30px;
+                justify-content: center;
+                text-align: center;
+
+            }
+
+            .search {
+                float: none;
+                color: purple;
+                margin-left: 30px;
+                padding-bottom: 20px;
+
+            }
+        }
+
+        @media(max-width:768px) {
+            .btn {
+                align-items: center;
+                justify-content: center;
+                position: sticky;
+                margin-left: 100px;
+            }
+
+        }
+
+        @media(width:1024px) {
+            .btn {
+                align-items: center;
+                justify-content: center;
+                position: sticky;
+                margin-left: 100px;
+            }
+
+        }
+
+
+        @media(max-width:700px) {
+            video {
+                flex-direction: column;
+
+            }
+
+            .fa-solid {
+                color: white;
+            }
+        }
+
+        @media(max-width:667px) {
+            .text-box h1 {
+                font-size: 20px;
+            }
+
+            .nav-links ul li {
+                display: block;
+
+            }
+
+            .nav-links {
+                position: fixed;
+                background: grey;
+                height: 110vh;
+                width: 200px;
+                top: 0;
+                right: -200px;
+                text-align: left;
+                z-index: 2;
+                transition: 1s;
+                /* display: none; */
+            }
+
+            nav .fa {
+                display: block;
+                color: white;
+                margin: 10px;
+                font-size: 22px;
+                cursor: pointer;
+
+            }
+
+            .nav-links ul {
+                padding: 30px;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="topnav" id="myTopnav">
+                <div class="nav-links" id="navlinks">
+                    <i class="fa-solid fa-xmark" onclick="hidemenue()"></i>
+                    <ul>
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">ABOUT</a></li>
+                        <li><a href="#">SERVICES</a></li>
+                        <li><a href="#">CONTACT</a> </li>
+                        <div class="search">
+
+                            <input type="text" name="search" id="search" placeholder="search here"
+                                class="fa-solid fa-magnifying-glass"></i>
+
+
+                        </div>
+
+                </div>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showmenue()"></i>
+        </nav>
+
+        <section id="home">
+            <h1 class="h1">BEAUTIFUL PLACES TO VISIT PAKISTAN</h1> <br>
+            <p class="p2">Lorem ipsum dolor, sit amet consectetur adipisicing <br> elit. Illum, earum? Lorem ipsum <br>
+                dolor sit amet consectetur adipisicing elit..</p>
+            <button onclick="hello()" class="btn">click here</button>
+        </section>
+
+
+        <section class="nature">
+            <h1 id="h1">THREE BEST PLACES TO VISIT PAKISTAN</h1>
+            <div class="row">
+
+                <div class="col">
+                    <h1>HUNZA</h1>
+                    <img src="hunza.jpg" height="50%" width="100%" alt="">
+
+                    <p>
+                        Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Molestiae officiis sed est culpa at blanditiis rerum iusto laborum consequatur
+                        libero. consectetur adipisicing elit. Quia quasi numquam dolore, iure enim error omnis quod ab
+                        esse eius.
+                    </p>
+                </div>
+                <div class="col">
+                    <h1>SAWAT</h1>
+                    <img src="https://nomadparadise.com/wp-content/uploads/2021/04/pakistan-places-02-768x512.jpg.webp"
+                        height="50%" width="100%" alt="">
+                    <p>
+                        Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia quasi
+                        numquam dolore,Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur amet
+                        obcaecati culpa repudiandae voluptates, natus hic quia nam dolorem asperiores. iure enim error
+                        omnis quod ab esse eius.
+                    </p>
+                </div>
+                <div class="col">
+                    <h1>SKARDU</h1>
+                    <img src="https://nomadparadise.com/wp-content/uploads/2021/04/pakistan-places-05-768x512.jpg.webp"
+                        height="50%" width="100%" alt="">
+                    <p>
+                        Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia quasi
+                        numquam dolore, iure enim error omnis quod ab esse eius. Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Harum delectus aperiam aliquam explicabo voluptates fugiat iure animi
+                        accusamus repudiandae illo?
+                    </p>
+                </div>
+            </div>
+
+        </section>
+        <section class="nature2">
+
+            <div class="row1">
+                <div class="video">
+                    <video controls autoplay muted loop>
+                        <source src="/video1.mp4" type="video/mp4">
+                    </video>
+                    <div class="video">
+                        <video controls autoplay muted loop>
+                            <source src="/video2.mp4" type="video/mp4">
+                        </video>
+                        <div class="video">
+                            <video controls autoplay muted loop>
+                                <source src="/video3.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+
+        </section>
+    </header>
+
+    <script>
+        var navlinks = document.getElementById("navlinks");
+        function showmenue() {
+            navlinks.style.left = "0px";
+            //  navlinks.style.display="block";
+        }
+        function hidemenue() {
+            navlinks.style.left = "-200px"
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        * {
+            font-size: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 
+        #panel, #flip {
+  padding: 5px;
+  text-align: center;
+  background-color:yellowgreen;
+  border: solid 1px #c3c3c3;
+}
+
+
+#panel {
+  padding: 100px;
+  display: none;
+  background-color: rgb(216, 238, 177);
+} */
+        #container,
+        #container2 {
+            padding: 5px;
+            text-align: center;
+            background-color: yellowgreen;
+            border: solid 1px #c3c3c3;
+            cursor: pointer;
+        }
+
+
+        #container2 {
+            padding: 100px;
+            display: none;
+            background-color: rgb(216, 238, 177);
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- <div id="flip">Click to slide the panel down or up</div>
+<div id="panel">Hello world!</div> -->
+    <div id="container">click here</div>
+    <div id="container2">this is a slide</div>
+
+    <h1 style="font-size: 30px;">forms</h1>
+    <form action="">
+        <label for="name">NAME :</label>
+        <input type="name" id="fname" placeholder="enter your name">
+        <br>
+        <br>
+        <label for="batch code">BATCH CODE :</label>
+        <input type="batch code" id="fcode" placeholder="enter your batch code">
+        <br>
+        <br>
+        <label for="course">course</label>
+
+        <select name="courses" id="fcourse">
+            <option value="select">select</option>
+            <option value="java">java</option>
+            <option value="php">php</option>
+            <option value="python">python</option>
+
+        </select>
+    </form>
+    <!-- focus and blur is a  form function -->
+    <button id="btn1">hide</button>
+    <button id="btn2">show</button>
+
+    <p id="p">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias, consectetur?</p>
+
+
+
+    <script>
+        $(document).ready(function () {
+            $("#fname, #fcode,#fcourse ").focus(function () {
+                $(this).css('background', 'pink')
+            })
+            $('#fname,#fcode ,#fcourse').blur(function () {
+                $(this).css('background', 'purple')
+            })
+            $('#btn1').click(function () {
+                $('#p').hide(5000);
+                // alert('the paragraph is now hidden')
+
+
+            })
+            $('#btn2').click(function () {
+                $('#p').show(5000);
+                // alert('the paragraph is now show')
+
+
+            })
+
+
+
+            $('#p').mouseenter(function () {
+                $('#p').css('background', 'orange')
+            })
+            $('#p').mouseleave(function () {
+                $('#p').css('background', 'yellow')
+            })
+            $('body').keypress(function () {
+                $(this).css('background', 'pink')
+            })
+            $('body').keyup(function () {
+                $(this).css('background', ' cornflowerblue')
+            })
+
+
+        })
+        // $(document).ready(function () {
+        //     $("#flip").click(function () {
+        //         $("#panel").slideToggle("slow");
+        //     });
+        // });
+        $(document).ready(function () {
+            $('#container').click(function () {
+                $('#container2').slideToggle("slow")
+            })
+        })
+        $(document).ready(function(){
+            var a=$('body').attr('');
+            console.log(a);
+            
+        })
+    </script>
+</body>
+
+</html>

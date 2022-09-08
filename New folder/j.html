@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <p id="id">this is a paragraph</p>
+    <p id="this">this is a paragraph</p>
+    <p id="id">this is a paragraph</p>
+    <p class="class">this is a paragraph</p>
+    <button id="btn">toggle now</button>
+    <div id="container" style=" font-size: 30px; font-weight: bold; font-style: italic; color: darkgreen;">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam aliquam quibusdam eveniet possimus esse natus
+        quos ratione suscipit voluptatibus inventore? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore
+        id repudiandae minus voluptate debitis asperiores pariatur impedit rem, consequuntur, officiis dolor
+        necessitatibus animi repellat temporibus aliquid libero, consequatur ipsam et. Perferendis ad consectetur
+        voluptatem amet, veniam natus optio eum exercitationem sequi animi totam quidem tenetur modi sint dolorem?
+        Beatae, nihil!
+    </div>
+    <!-- <div id="container2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis maxime voluptatum dolorem delectus minima blanditiis dolorum, porro ipsam minus possimus.
+    </div> -->
+    <!-- <form>
+        <input id='inp' type="text">
+        <textarea id='ta'> this is your value my text area</textarea>
+        
+    </form> -->
+
+    <script>
+        $('p').click(function () {
+
+            console.log('you clicked on p', this);
+            $('.class').hide();
+            $('#id').hide();
+            $('this').hide();
+
+        })
+        // 3 types of selectors in jquery
+        // 1.id selector
+        // 2.class selector
+        // 3.element selector
+        $('p').on(
+            {
+                click: function () {
+                    document.log('thanks for clicking', this)
+                },
+                mouseleave: function () {
+                    console.log('mouseleave');
+                }
+            }
+        )
+        //     $('#container').hide(1000, function () {
+        //     console.log("hidden");
+        // })   
+        // $('#container').show(1000, function () {
+        //     console.log("show");
+
+
+        // })
+
+        // $('#btn').click(function () {
+        //     $('#container').fadeToggle(5000);
+        // })
+        // $('#container').slideUp(5000);
+        // $('#container').slideDown(5000);
+        // $('#container').slideToggle(5000);
+        // $('#container').animate({
+        //     opacity: 1,
+        //     height: '150px',
+        //     width: '350px'
+        // }, "fast")
+
+
+        //         $('#container').animate({ opacity: 0.3 }, 4000);
+        //         $('#container').animate({ opacity: 0.9 }, 1000);
+        //         $('#container').animate({ width: '350px' }, 12000);
+        // fadeIn()
+        // fadeOut()
+        // fadeToggle()
+        // fadeTo()
+
+          $('#ta').val('setting it to harry');
+            $('#ta').html('setting it to harry');
+            $('#ta').html('setting it to harry3');
+            $('#inp').html('setting it to harry3');
+            $('#inp').val('setting it to harry3');
+
+        $('#inp').empty()
+        $('#container').empty()
+        $('#container').text('you are good')
+        $('#container').remove()
+
+        //     $('#container').addClass('myclass')
+        // // $('#container').addClass('myclass2')
+        // // $('#container').removeClass('myclass2')
+        // $('#container').css('background-color', 'orange')
+        // $('#container').css('margin','200px')
+        // $('#container').css('padding','100px')
+        // $('#container2').css('background-color','pink')
+        // $('#container2').css('display','flex')
+        // $('#container2').css('margin','200px')
+        // $('#container2').css('padding','100px')
+        // $('#container2').css('font-size','30px')
+
+        // BASIC SYNTAX
+        // $(document).ready (function(){
+        //     var a =$('#container').html();
+        //     console.log(a);
+
+        // });
+        $(document).ready(function () {
+            $('#container').css('border', '5px solid red')
+            $('#container').css('background', 'pink')
+            $('#container').css('margin', '200px')
+            $('#container').css('padding', '100px')
+            $('#container').click(function () {
+                $('#container').css('background', 'yellow')
+            })
+            $('#container').contextmenu(function () {
+                $('#container').css('background', 'aqua')
+            })
+        })
+        $(document).ready(function () {
+            $('#container').dblclick(function () {
+                $('#container').css('color', 'red')
+            })
+            // $('#container').mouseenter(function(){
+            //     $('#container').css('background','white')
+            // })
+
+            $('#container').mouseleave(function () {
+                $('#container').css('background', 'purple')
+                $('#container').css('color', 'pink')
+            })
+            $('#container').mouseenter(function () {
+                $('#container').css('background', 'blue')
+            })
+
+            $('body').keypress(function () {
+                $(this).css('background', 'aqua')
+            })
+            $('body').keyup(function () {
+                $(this).css('background', 'orange')
+            })
+        })
+
+
+
+    </script>
+</body>
+
+</html>

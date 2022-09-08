@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="app">
+           <input type="text" class="app" placeholder="html,css" id="html">
+        </div>
+        <div class="app">
+            <input type="text" class="app" placeholder="javascript" id="js">
+        </div>
+        <div class="app">
+            <input type="text" class="app" placeholder="java" id="java">
+        </div>
+        <div class="app">
+            <input type="text" class="app" placeholder="jquery" id="jquery">
+        </div>
+       <button id="cal" onclick="hello()">show result</button>
+    </div>
+    <script>
+        const app=()=>{
+let html =document.getElementById('html').value;
+let js =document.getElementById('js').value;
+let javascript =document.getElementById('javascript').value;
+let java =document.getElementById('java').value;
+let jquery =document.getElementById('jquery').value;
+let totalgrades = "html" + "js" + "java" + "jquery";
+  // ONCLICK FUNCTION
+    function hello()
+    {
+       document.getElementById("cal").innerHTML(hello)
+    }
+    hello();
+        }
+    </script>
+</body>
+</html>

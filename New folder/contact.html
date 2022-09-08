@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/35c51907f9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <form>
+      <div class="input-group">
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter your name" id="contact-name" onkeyup="validateName()">
+        <span id="name-error"></span>
+      </div>
+
+      <div class="input-group">
+        <label>Phone No.</label>
+        <input type="tel" placeholder="Enter your number" id="contact-phone" onkeyup="validatephone()">
+        <span id="phone-error"></span>
+      </div>
+
+      <div class="input-group">
+        <label>Email Id</label>
+        <input type="email" placeholder="Enter Email" id="contact-email" onkeyup="validateEmail()">
+        <span id="email-error"></span>
+      </div>   
+      <div class="input-group">
+        <label>Password</label>
+        <input type="password" placeholder="Enter Password" id="contact-password" onkeyup="validatePassword()">
+        <span id="password-error"></span>
+      </div>   
+
+      <div class="input-group">
+        <label>Your Message</label>
+        <textarea rows="5" placeholder="Enter your message" id="contact-message" onkeyup="validatemessage()"></textarea>
+        <span id="message-error"></span>
+      </div>
+
+    <button>Submit</button>
+    <span id="submit-error"></span>
+   
+  </form>
+  </div>
+  <script>
+   var nameError = document.getElementById('name-error');
+   var phoneError = document.getElementById('phone-error');
+   var emailError = document.getElementById('email-error');
+   var passwordError = document.getElementById('password-error');
+   var messageError = document.getElementById('message-error');
+   var submitError = document.getElementById('submit-error');
+
+   function validateName(){
+    var name = document.getElementById('contact-name').value;
+    if(name.length==0){
+      nameError.innerHTML = 'name is required';
+      return false;
+    }
+    if(!name.match(/^([a-zA-Z ]){2,30}$/)){
+      nameError.innerHTML = 'enter valid name ';
+      return false;
+
+    }
+    nameError.innerHTML='<i class="fa-solid fa-circle-check"></i>';
+    return true;
+   }
+
+   function validatephone(){
+    var phone = document.getElementById('contact-phone').value;
+    if(phone.length==0){
+      phoneError.innerHTML='phone no. is required ';
+      return false;
+    }
+    if(phone.length !==11){
+      phoneError.innerHTML= 'phone no should be 11 digits ';
+      return false;
+    }
+    if(!phone.match(/^[0-10]{}$/)){
+      phoneError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+      return false;
+    }
+   }
+
+   function validateEmail(){
+    var email = document.getElementById('contact-email').value;
+    if(email.length==0){
+      emailError.innerHTML='email is required ';
+      return false;
+    }
+   
+    if(!email.match('[a-z0-9]+@[a-z]+\.[a-z]{2,3}')){
+      emailError.innerHTML= 'invalid email ';
+      return false;
+    }
+   
+      emailError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+      return true;
+    
+   }
+   function validatePassword(){
+    var password = document.getElementById('contact-password').value;
+    if(password.length==0){
+      passwordError.innerHTML='password is required ';
+      return false;
+    }
+    if(password.length !==8){
+      passwordError.innerHTML= 'Must contain at least one number and one uppercase  and lowercase letter, and at least 8  characters ';
+      return false;
+    }
+    if(!password.match("(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}")){
+      passwordError.innerHTML= 'invalid password ';
+      return false;
+    }
+   
+      passwordError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+      return true;
+    
+   }
+   function validatemessage(){
+    var message = document.getElementById('contact-message').value;
+    var required=30;
+    var left=required - message.length;
+    if(left > 0){
+      messageError.innerHTML = left +'more characters required';
+      return false;
+    }
+    
+   
+      messageError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+      return true;
+    
+   }
+
+
+
+  </script>
+   
+</body>
+</html>
